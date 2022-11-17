@@ -1,0 +1,11 @@
+require("jake.plugins-setup")
+require("jake.core.options")
+require("jake.core.colorscheme")
+require("jake.core.keymaps")
+require("jake.plugins.comment")
+require("jake.plugins.nvim-tree")
+require("jake.plugins.lualine")
+require("jake.plugins.telescope")
+require("jake.plugins.treesitter")
+require("jake.plugins.gitsigns")
+
