@@ -29,8 +29,7 @@ treesitter.setup({
     "bash",
     "lua",
     "vim",
-    "dockerfile",
-    "gitignore",
+    "dockerfile"
   },
   -- auto install above language parsers
   auto_install = true,
