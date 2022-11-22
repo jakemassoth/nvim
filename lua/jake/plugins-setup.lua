@@ -29,7 +29,7 @@ end
 
 return packer.startup(function(use)
 	use("wbthomason/packer.nvim")
-	use("safv12/andromeda.vim") -- color scheme
+	use({ "catppuccin/nvim", as = "catppuccin" })
 
 	use("nvim-lua/plenary.nvim")
 
