@@ -26,6 +26,7 @@ mason_lspconfig.setup({
 		"html",
 		"cssls",
 		"sumneko_lua",
+		"yamlls",
 	},
 	-- auto-install configured servers (with lspconfig)
 	automatic_installation = true, -- not the same as ensure_installed
@@ -34,9 +35,11 @@ mason_lspconfig.setup({
 mason_null_ls.setup({
 	-- list of formatters & linters for mason to install
 	ensure_installed = {
-		"prettier", -- ts/js formatter
+		"prettierd", -- ts/js formatter
 		"stylua", -- lua formatter
-		"eslint", -- ts/js linter
+		"eslint_d", -- ts/js linter
+		"actionlint", -- github actions linter
+		"yamlfmt", -- yaml formatter
 	},
 	-- auto-install configured formatters & linters (with null-ls)
 	automatic_installation = true,
