@@ -27,6 +27,8 @@ mason_lspconfig.setup({
 		"cssls",
 		"sumneko_lua",
 		"yamlls",
+		"gopls",
+		"svelte-language-server",
 	},
 	-- auto-install configured servers (with lspconfig)
 	automatic_installation = true, -- not the same as ensure_installed
@@ -40,6 +42,7 @@ mason_null_ls.setup({
 		"eslint_d", -- ts/js linter
 		"actionlint", -- github actions linter
 		"yamlfmt", -- yaml formatter
+		"gofmt", -- go formatter
 	},
 	-- auto-install configured formatters & linters (with null-ls)
 	automatic_installation = true,
