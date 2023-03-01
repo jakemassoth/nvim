@@ -75,9 +75,38 @@ lspconfig["cssls"].setup({
 	on_attach = on_attach,
 })
 
+lspconfig["jsonls"].setup({
+	capabilities = capabilities,
+	on_attach = on_attach,
+	filetypes = { "json", "jsonc" },
+	settings = {
+		json = {
+			-- Schemas https://www.schemastore.org
+			schemas = {
+				{
+					fileMatch = { "package.json" },
+					url = "https://json.schemastore.org/package.json",
+				},
+				{
+					fileMatch = { "tsconfig*.json" },
+					url = "https://json.schemastore.org/tsconfig.json",
+				},
+			},
+		},
+	},
+})
+
 lspconfig["yamlls"].setup({
 	capabilities = capabilities,
 	on_attach = on_attach,
+	settings = {
+		yaml = {
+			schemas = {
+				["http://json.schemastore.org/github-workflow.json"] = ".github/workflows/*.{yml,yaml}",
+				["http://json.schemastore.org/github-action.json"] = ".github/action.{yml,yaml}",
+			},
+		},
+	},
 })
 
 lspconfig["gopls"].setup({
@@ -86,6 +115,11 @@ lspconfig["gopls"].setup({
 })
 
 lspconfig["svelte"].setup({
+	capabilities = capabilities,
+	on_attach = on_attach,
+})
+
+lspconfig["eslint"].setup({
 	capabilities = capabilities,
 	on_attach = on_attach,
 })
